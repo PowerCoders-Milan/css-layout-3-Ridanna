@@ -1,1 +1,76 @@
 /* USE CSS GRID AND FLEX HERE */
+.header{
+    background-color: aqua;
+    grid-area: header;
+}
+.conten{
+    background-color: tomato;
+    grid-area: conten;
+}
+.feuture-1{
+    background-color: blanchedalmond;
+    grid-area: feuture-1;
+
+}
+.feuture-2{
+    background-color: skyblue;
+    grid-area: feuture-2;
+
+}
+.feuture-3{
+    background-color: cornflowerblue;
+    grid-area: feuture-3;
+
+}
+.sign-up{
+    background-color: darkgray;
+    grid-area: sign-up;
+}
+.container{
+    display: grid;
+    grid-template-rows: 20% 20% 20% 20% 20%;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    min-height: 100vh;
+    margin: 0;
+}
+@media(max-width: 600px){
+    .container{
+        display: grid;
+        grid-template-rows: 20% 20% 20% 20% 20%;
+        grid-template-columns: 100%;
+        min-height: 100vh;
+        margin: 0;
+        grid-template-areas: "header" 
+        "conten"
+        "sign-up"
+        "feuture-1";
+    }
+}
+@media(min-width: 600px){
+    .container{
+        display: grid;
+        grid-template-rows: 20% 20% 20% 20% 20%;
+        grid-template-columns: 50% 50%;
+        min-height: 100vh;
+        margin: 0;
+        grid-template-areas: "header header"
+        "conten conten"
+        "sign-up feuture-1"
+        "feuture-2 feuture-3";
+    }
+}
+@media(min-width: 1200px){
+    .container{
+        display: grid;
+        grid-template-rows: 20% 20% 20% 20% 20%;
+        grid-template-columns: 1fr 1fr 1fr;
+        min-height: 100vh;
+        margin: 0;
+        grid-template-areas: "header header header" 
+        "feuture-1 feuture-2 feuture-3"
+        "sign-up sign-up sign-up"
+        "conten conten conten";
+    }
+}
+
+
